@@ -1,0 +1,5 @@
+streamlit
+scikit-learning_curve
+pandas
+joblib
+numpy
