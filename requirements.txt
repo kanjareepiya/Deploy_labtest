@@ -1,5 +1,5 @@
 streamlit
-scikit-learning_curve
+scikit-learn
 pandas
 joblib
 numpy
