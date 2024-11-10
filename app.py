@@ -38,16 +38,16 @@ body_mass = st.number_input('Body Mass (g)', min_value=2000.0, max_value=6000.0,
 # Make a prediction using the trained model
 if st.button('Predict'):
     x= pd.DataFrame({
-        'culmen_length' : [culmen_length],
-        'culmen_depth' : [culmen_depth],
-        'flipper_length' : [flipper_length],
-        'body_mass' : [body_mass]
+        'culmen_length_mm' : [culmen_length],
+        'culmen_depth_mm' : [culmen_depth],
+        'flipper_length_mm' : [flipper_length],
+        'body_mass_g' : [body_mass]
     })
     # input_features = np.array([culmen_length,culmen_depth,flipper_length,body_mass])
-    input = x[['culmen_length',
-        'culmen_depth',
-        'flipper_length' ,
-        'body_mass']]
+    input = x[['culmen_length_mm',
+        'culmen_depth_mm',
+        'flipper_length_mm' ,
+        'body_mass_g']]
     predicted = model.predict(input)  # Make the prediction
     predicted_species = prediction[0]  # Get the predicted species
     
