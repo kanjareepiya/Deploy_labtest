@@ -38,7 +38,7 @@ body_mass = st.number_input('Body Mass (g)', min_value=2000.0, max_value=6000.0,
 
 # Make a prediction using the trained model
 if st.button('Predict'):
-    x= pd.DataFram({
+    x= pd.DataFrame({
         'culmen_length' : [culmen_length],
         'culmen_depth' : [culmen_depth],
         'flipper_length' : [flipper_length],
