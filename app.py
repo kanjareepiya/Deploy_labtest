@@ -24,7 +24,7 @@ culmen_depth = st.number_input('Culmen Depth (mm)', min_value=10.0, max_value=10
 flipper_length = st.number_input('Flipper Length (mm)', min_value=100.0, max_value=250.0, value=181.0)
 body_mass = st.number_input('Body Mass (g)', min_value=2000.0, max_value=6000.0, value=3750.0)  # เปลี่ยน min_value และ max_value เป็น float
 
-input_features = np.array([culmen_length,culmen_depth,flipper_length,body_mass])
+
 # Create a DataFrame with the input data
 #input_data = pd.DataFrame({
  #   'culmen_length_mm': [culmen_length],
@@ -38,6 +38,7 @@ input_features = np.array([culmen_length,culmen_depth,flipper_length,body_mass])
 
 # Make a prediction using the trained model
 if st.button('Predict'):
+    input_features = np.array([culmen_length,culmen_depth,flipper_length,body_mass])
     predicted = model.predict(input_features)  # Make the prediction
     predicted_species = prediction[0]  # Get the predicted species
     
