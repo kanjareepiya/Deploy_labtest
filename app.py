@@ -35,7 +35,7 @@ input_data = pd.DataFrame({
 
 # Make a prediction using the trained model
 if st.button('Predict'):
-    prediction = model.predict(input_data_scaled)  # Make the prediction
+    prediction = model.predict(input_data)  # Make the prediction
     predicted_species = prediction[0]  # Get the predicted species
     
     # Display the prediction
