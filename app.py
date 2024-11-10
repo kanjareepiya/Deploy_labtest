@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy as np
+import joblib
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 
@@ -37,7 +38,7 @@ input_features = np.array([culmen_length,culmen_depth,flipper_length,body_mass])
 
 # Make a prediction using the trained model
 if st.button('Predict'):
-    prediction = model.predict(input_features)  # Make the prediction
+    predicted = model.predict(input_features)  # Make the prediction
     predicted_species = prediction[0]  # Get the predicted species
     
     # Display the prediction
