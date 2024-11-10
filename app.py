@@ -31,8 +31,7 @@ input_data = pd.DataFrame({
 })
 
 # Standardize the input features using the same scaler as during training
-scaler = StandardScaler()
-input_data_scaled = scaler.fit_transform(input_data)
+
 
 # Make a prediction using the trained model
 if st.button('Predict'):
