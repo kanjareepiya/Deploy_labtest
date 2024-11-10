@@ -49,7 +49,7 @@ if st.button('Predict'):
         'flipper_length_mm' ,
         'body_mass_g']]
     predicted = model.predict(input)  # Make the prediction
-    predicted_species = prediction[0]  # Get the predicted species
+    predicted_species = predicted[0]  # Get the predicted species
     
     # Display the prediction
     st.write(f"The predicted species of the penguin is: {predicted_species}")
